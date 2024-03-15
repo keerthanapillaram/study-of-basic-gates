@@ -74,17 +74,18 @@ Program for logic gates and verify its truth table in quartus using Verilog prog
  
 **Logic symbol & Truthtable**
 ```
-module ex01(a,b,Y1,Y2,Y3,Y4,Y5,Y6,Y7);
+module LogicGates(a,b,and_out,or_out,not_out,xor_out,xnor_out,nand_out,nor_out);
 input a,b;
-output Y1,Y2,Y3,Y4,Y5,Y6,Y7;
-and(Y1,a,b);
-or(Y2,a,b);
-not(Y3,a);
-xor(Y4,a,b);
-nand(Y5,a,b);
-nor(Y6,a,b);
-xnor(Y7,a,b);
+output and_out,or_out,not_out,xor_out,xnor_out,nand_out,nor_out;
+and g1(and_out,a,b);
+or g2(or_out,a,b);
+not g3(not_out,a);
+xor g4(xor_out,a,b);
+xnor g5(xnor_out,a,b);
+nand g6(nand_out,a,b);
+nor g7(nor_out,a,b);
 endmodule
+
 ```
 
 **RTL realization Output:** 
